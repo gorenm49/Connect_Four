@@ -17,6 +17,7 @@ type panel struct {
 func main() {
 
 	var p1 panel = panel{
+
 		turn: 0,
 		position: [][]string{
 			[]string{"| - |", "| - |", "| - |", "| - |", "| - |", "| - |", "| - |"},

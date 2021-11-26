@@ -99,7 +99,6 @@ func (p1 panel) endGame(p int) bool {
 	position := p1.position
 	tile := p1.getTile(p)
 
-	//  horizontal check
 	for j := 0; j < rows-3; j++ {
 		for i := 0; i < cols; i++ {
 			if position[i][j] == tile && position[i][j+1] == tile && position[i][j+2] == tile && position[i][j+3] == tile {
@@ -108,7 +107,6 @@ func (p1 panel) endGame(p int) bool {
 		}
 	}
 
-	//  vertical check
 	for i := 0; i < cols-3; i++ {
 		for j := 0; j < rows; j++ {
 
@@ -118,7 +116,6 @@ func (p1 panel) endGame(p int) bool {
 		}
 	}
 
-	// +ve diag
 	for i := 3; i < cols; i++ {
 		for j := 0; j < rows-3; j++ {
 			if position[i][j] == tile && position[i-1][j+1] == tile && position[i-2][j+2] == tile && position[i-3][j+3] == tile {
@@ -127,7 +124,6 @@ func (p1 panel) endGame(p int) bool {
 		}
 	}
 
-	// -ve diag
 	for i := 0; i < cols-3; i++ {
 		for j := 3; j < rows; j++ {
 			if position[i][j] == tile && position[i-1][j-1] == tile && position[i-2][j-2] == tile && position[i-3][j-3] == tile {
